@@ -16,39 +16,53 @@
     <link rel="stylesheet" href="/static/css/style.css" type="text/css">
 </head>
 <body>
-	<div>
-		<label>
-			<a href="/display_success">Home</a>
-		</label>
-		<label>
-			<a href="/logout">Logout</a>
-		</label>
-	</div>
-	  {% with messages = get_flashed_messages(with_categories = true) %}
-	    {% if messages %}
-	      	<div class="message">
-	      {% for category, message in messages %}
-	        <li class="{{category}}"><p>{{message}}</p></li>
-	      {% endfor %}
-	        </div>
-	    {% endif %}
-	  {% endwith %}
-	<form action="/add_process" method="post">
+	<div class="container">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">
+		        <h3>Trip Planner</h3>
+		        <div class="buttons">
+			        <a href="/display_success"><button type="submit" class="btn btn-info" id="home_button">Home</button></a>
+			        <a href="/logout"><button type="submit" class="btn btn-default blue" id="logout_button">Logout</button></a>
+		        </div>
+		      </a>
+		    </div>
+		  </div>
+		</nav>
 		<div>
-			Destination: <input type="text" name="destination">
+		<div class="page-header">
+  			<h1 style="color: #265a88">Plan a Trip!</h1>
 		</div>
-		<div>
-			Description: <input type="text" name="plan">
+		  {% with messages = get_flashed_messages(with_categories = true) %}
+		    {% if messages %}
+		      	<div class="message">
+		      {% for category, message in messages %}
+		        <li class="{{category}}"><p>{{message}}</p></li>
+		      {% endfor %}
+		        </div>
+		    {% endif %}
+		  {% endwith %}
 		</div>
-		<div>
-			Travel Date From: <input type="date" name="start_date">
-		</div>
-		<div>
-			Travel Date To: <input type="date" name="end_date">
-		</div>
-		<div>
-			<input type="submit" value="Submit">
-		</div>
-	</form>
+		<form role="form" action="/add_process" method="post">
+		  <div class="form-group">
+				<p>Destination: <input type="text" class="form-control" name="destination"></p>
+		  </div>
+		  <div class="form-group">
+		    	<p>Description: <input type="text" class="form-control" name="plan"></p>
+		  </div>
+		  <div class="form-group">
+		    	<p>Travel Start Date: <input type="date" class="form-control" name="start_date"></p>
+		  </div>
+		  <div class="form-group">
+		    	<p>Travel End Date: <input type="date" class="form-control" name="end_date"></p>
+		  </div>
+		  <button type="submit" class="btn btn-success">Submit</button>
+		</form>
+
+
+	
+
+
 </body>
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Success Page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" src="...">
+	      </a>
+	    </div>
+	  </div>
+	</nav>
+		<div>
+			<label>
+				<a href="/logout">Logout</a>
+			</label>
+		</div>
+		<h1>Welcome, {{username}}!</h1>
+		<h1>Your Trip Schedules</h1>
+
+
+		<table row="1">
+			<thead>
+				<tr>
+					<th class = "data">Destination</th>
+					<th class = "data">Travel Start Date</th>
+					<th class = "data">Travel End Date</th>
+					<th class = "data">Plan</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% if my_trips %}
+					{% for my_trip in my_trips %}
+						<tr>
+							<td class = "data"><a href="/display_trip/{{my_trip['trip_id']}}">{{my_trip['destination']}}</a></td>
+							<td class = "data">{{my_trip['start_date']}}</td>
+							<td class = "data">{{my_trip['end_date']}}</td>
+							<td class = "data">{{my_trip['plan']}}</td>
+						</tr>
+					{% endfor %}
+				{% endif %}
+			</tbody>
+		</table>
+
+		<table row="1">
+			<thead>
+				<tr>
+					<th class = "data">Name</th>
+					<th class = "data">Destination</th>
+					<th class = "data">Travel Start Date</th>
+					<th class = "data">Travel End Date</th>
+					<th class = "data">Do you want to join?</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% if other_trips %}
+					{% for trip in other_trips %}
+						<tr>
+							<td class = "data">{{trip['username']}}</td>
+							<td class = "data"><a href="/display_trip/{{trip['trip_id']}}">{{trip['destination']}}</a></td>
+							<td class = "data">{{trip['start_date']}}</td>
+							<td class = "data">{{trip['end_date']}}</td>
+							<td><a href="/join/{{trip['trip_id']}}">Join</a></td>
+						</tr>
+					{% endfor %}
+				{% endif %}
+			</tbody>
+		</table>
+		<a href="/add_a_trip">Add a trip!</a>
+
+</body>
+</html>

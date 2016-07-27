@@ -1,0 +1,18 @@
+.form_style{
+	border: 3px dotted black;
+	margin: 20px;
+	padding: 10px;
+	width: 600px;
+}
+
+.errors{
+	color: red;
+}
+
+.success{
+	color: green;
+}
+
+.data{
+	padding: 15px;
+}

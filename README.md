@@ -1,6 +1,5 @@
 # Travels
 A site where one can plan trips for others to join. Built in Python. 
-<<<<<<< HEAD
 # Pylot MVC (beta)
 Pylot MVC is a lightweight MVC framework built in Python leveraging flask.
 
@@ -32,7 +31,3 @@ python manage.py runserver
 ```
 
 Enjoy! More details/features coming soon!
-=======
-# Travels
-A site where one can plan trips for others to join. Built in Python. 
->>>>>>> 2ff5ba504289c9d11fab019b825c8a2aaf96d8fc

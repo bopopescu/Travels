@@ -1,11 +1,13 @@
 * {
   font-family: monaco;
+
 }
-.form_style{
-	border: 3px dotted black;
-	margin: 20px;
-	padding: 10px;
-	width: 600px;
+body{
+	/*background-color: lightblue;*/
+}
+#login_form{
+	margin: 5px 0px 0px 300px;
+	display: inline-block;
 }
 
 .errors{
@@ -25,10 +27,33 @@
 }
 
 .buttons{
-	margin: 10px 0px 0px 820px;
+	margin: 10px 0px 0px 600px;
+	display: inline-block;
 }
 
-
+.logo{
+	width: 48px;
+	height: 40px;
+	background: url('../imgs/logo3.png');
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: cover;
+}
+.logo_main{
+	margin: 0px 0px 0px 150px;
+	width: 200px;
+}
+.logo_sub{
+	margin: 0px 0px 0px 150px;
+	width: 200px;
+}
+.title{
+	display: inline-block;
+	vertical-align: top;
+/*	border-bottom: 2px solid #2a6599;*/
+	color: #2289f6;
+}
 #trip_main{
 	display: inline-block;
 	padding-right: 30px;
@@ -41,6 +66,48 @@
 	margin-top: 10px;
 	vertical-align: top;
 }
+#body_container{
+    background: lightblue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lightblue, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lightblue, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lightblue, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lightblue, white); /* Standard syntax */
+}
+#banner{
+    background: lightblue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lightblue, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lightblue, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lightblue, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lightblue, white); /* Standard syntax */
+    vertical-align: top;
+}
+	#banner img{
+		margin: 50px 0px 30px 125px;
+	}
+#caption{
+	margin: 0px 0px 30px 10px;
+	vertical-align: top;
+}
+#globe{
+
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	margin: 15px 0px 0px 125px;
+	vertical-align: top;
+}	
+
+#register_form{
+	display: inline-block;
+	width: 500px;
+}
 li{
 	list-style-type: none;
+}
+.message{
+	display: inline-block;
+	width: 400px;
+
+	margin: 55px 0px 0px 125px;
+	vertical-align: top;
 }

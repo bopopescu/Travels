@@ -12,25 +12,22 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
     <link rel="stylesheet" href="/static/css/style.css" type="text/css">
 </head>
 <body>
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+			<img src="../static/imgs/logo5.png" class="logo_sub">
+	        <div class="buttons">
+		        <a href="/display_success"><button type="submit" class="btn btn-info" id="home_button">Home</button></a>
+		        <a href="/logout"><button type="submit" class="btn btn-default blue" id="logout_button">Logout</button></a>
+	        </div>
+	    </div>
+	  </div>
+	</nav>
 	<div class="container">
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">
-		        <h3>Trip Planner</h3>
-		        <div class="buttons">
-			        <a href="/display_success"><button type="submit" class="btn btn-info" id="home_button">Home</button></a>
-			        <a href="/logout"><button type="submit" class="btn btn-default blue" id="logout_button">Logout</button></a>
-		        </div>
-		      </a>
-		    </div>
-		  </div>
-		</nav>
-		<div>
 		<div class="page-header">
   			<h1 style="color: #265a88">Plan a Trip!</h1>
 		</div>
@@ -43,7 +40,6 @@
 		        </div>
 		    {% endif %}
 		  {% endwith %}
-		</div>
 		<form role="form" action="/add_process" method="post">
 		  <div class="form-group">
 				<p>Destination: <input type="text" class="form-control" name="destination"></p>
@@ -59,10 +55,6 @@
 		  </div>
 		  <button type="submit" class="btn btn-success">Submit</button>
 		</form>
-
-
-	
-
-
+	</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# Travels
+# Plannit.
 A site where one can plan trips for others to join. Built in Python. 
 # Pylot MVC (beta)
 Pylot MVC is a lightweight MVC framework built in Python leveraging flask.
